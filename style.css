@@ -1,0 +1,80 @@
+:root {
+    --bg-color: #F3EEEA;
+    --primary: #EBE3D5;
+    --secundary: #776B5D;
+    --terciary: #B0A695;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-size: 24px;
+    color: var(--primary);
+    height: 100vh;
+}
+
+.menu1 { 
+    min-height: 100vh;
+}
+
+.menu2 { 
+    min-height: 100vh;
+}
+
+.cabecalho {
+    background-color: var(--secundary);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cabecalho__menu {
+    text-decoration: none;
+     color: var(--primary);
+}
+
+.cabecalho__lista,
+.cabecalho__lista__secundaria {
+    display: none;
+}
+
+.cabecalho__menu.active ~ .cabecalho__lista{
+    display: block;
+    position: absolute;
+    background-color: var(--secundary);
+    top: 100%;
+}
+
+
+.cabecalho__secundario {
+    justify-content: start;
+}
+
+.cabecalho__lista__secundaria {
+    left: 0%;
+    width: 20%;
+    min-height: 100vh;   
+    text-align: center;
+}
+
+.lista__item__secundaria {
+    margin-top: 2em 0 2em 0;
+}
+
+.lista__item,
+.lista__item__secundaria {
+   margin: 1em 0 1em 0;
+   justify-self: center;
+   border: 2px solid var(--terciary);
+   padding: 0.05em;
+}
+
+.lista__item__secundaria {
+    padding: 1em;
+}
+
+.lista__item,
+.lista__item__secundaria:hover {
+    cursor: pointer;
+}
